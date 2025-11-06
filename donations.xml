@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="6.0" method="upgrade">
+    <name>com_donations</name>
+    <author>Your Name</author>
+    <creationDate>2025-11-05</creationDate>
+    <version>1.0.0</version>
+    <description>Donations component for Joomla 6</description>
+
+    <!-- ===================== -->
+    <!-- Site (frontend) files -->
+    <!-- ===================== -->
+    <files folder="site">
+        <filename>donations.php</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">site/language/en-GB/en-GB.com_donations.ini</language>
+        <language tag="en-GB">site/language/en-GB/en-GB.com_donations.sys.ini</language>
+    </languages>
+
+    <!-- =========================== -->
+    <!-- Administrator (backend)     -->
+    <!-- =========================== -->
+    <administration>
+        <menu>com_donations</menu>
+        <files folder="administrator">
+            <filename>donations.php</filename>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>language</folder>
+        </files>
+        <languages>
+            <language tag="en-GB">administrator/language/en-GB/en-GB.com_donations.ini</language>
+            <language tag="en-GB">administrator/language/en-GB/en-GB.com_donations.sys.ini</language>
+        </languages>
+    </administration>
+
+    <!-- =========================== -->
+    <!-- Database install/uninstall  -->
+    <!-- =========================== -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schema version="1.0.0">sql/updates/mysql/1.0.0.sql</schema>
+        </schemas>
+    </update>
+</extension>
